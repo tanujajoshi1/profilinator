@@ -25,7 +25,7 @@ function Item(props) {
 function Languages() {
     const classes = useStyles();
     return (
-        <div>
+        <div className = "skills-sub">
             <p>Programming Languages</p>
 
             <div className={classes.root}>
