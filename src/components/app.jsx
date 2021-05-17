@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
-import Languages from "./skills/languages"
+import Skills from "./skills/skills";
+import Social from "./social/social";
+import Addons from "./addons";
 
 function App() {
     return (<div>
         <Header />
-        <Languages />
+        <Skills />
+        <Social />
+        <Addons />
         <Footer />
     </div>);
 }
