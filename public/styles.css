@@ -52,7 +52,7 @@ label:hover {
     cursor: pointer;
 }
 
-.skills {
+.skills, .intro  {
     width: 90%;
     margin: 0 auto;
     padding: 30px 0;
@@ -60,4 +60,7 @@ label:hover {
 
 .skills-sub {
     padding: 20px 0 0 0;
+}
+ .subtitle, .title{
+    padding-bottom: 30px;
 }
