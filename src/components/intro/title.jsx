@@ -1,43 +1,60 @@
-import React from 'react';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Input from '@material-ui/core/Input';
+import React from "react";
+import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Input from "@material-ui/core/Input";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "left",
+    boxShadow: "none",
+    width: "100%",
+  },
+  input: {
+    width: "50%",
+  },
+}));
 
-    root: {
-        flexGrow: 1,
-      },
-      paper: {      
-      padding: theme.spacing(2),  
-      textAlign:'left',
-      boxShadow: 'none', 
-      width: '100%',
-    },
-    input:{
-        width:'50%',
-    }
-  }));
+function Title(title) {
 
-function Title(){
-    const classes = useStyles();
-    return(
-            <div className="title">
-           <div className={classes.root}>
-              <Grid container spacing={3}>
-                  <Grid item  xs={3}>
-                  <Paper className={classes.paper}><Input  defaultValue="Hi 👋, I'm" inputProps={{ 'aria-label': 'description' }} /></Paper>
-                  </Grid>                 
-                  <Grid item  xs={9}>                      
-                  <Paper className={classes.paper}><Input placeholder="Name" className={classes.input}inputProps={{ 'aria-label': 'description' }} /></Paper>
-                  </Grid>
-              </Grid>  
-              </div>
-              </div>
-           
-        
-    )
+  function handleChange(e){
+    console.log(e.target.id)
+    title.handleUpdate(e.target.id,e.target.value)
+
+  }
+
+  
+  const classes = useStyles();
+  return (
+    <div className="title">
+      <div className={classes.root}>
+        <Grid container spacing={3}>
+          <Grid item xs={3}>
+            <Paper className={classes.paper}>
+              <Input id="titlepretext" defaultValue="Hi 👋, I'm" inputProps={{ "aria-label": "description" }}
+              onChange={handleChange}
+              />
+            </Paper>
+          </Grid>
+          <Grid item xs={9}>
+            <Paper className={classes.paper}>
+              <Input
+                id="title"
+                placeholder="Name"
+                className={classes.input}
+                inputProps={{ "aria-label": "description" }}
+                onChange={handleChange}
+              />
+            </Paper>
+          </Grid>
+        </Grid>
+      </div>
+    </div>
+  );
 }
 
 export default Title;
