@@ -1,5 +1,4 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Input from '@material-ui/core/Input';
@@ -22,9 +21,8 @@ const useStyles = makeStyles((theme) => ({
   }));
 function Work(props){
 
-    function handleChange(e){
-        console.log(e.target.id)        
-        // props.handleUpdate( e.target.id , e.target.value )
+    function handleChange(e){              
+        props.handleUpdate( e.target.id , e.target.value )
 
     }
 

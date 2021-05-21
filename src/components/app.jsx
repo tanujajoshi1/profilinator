@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Skills from "./skills/skills";
@@ -7,8 +7,7 @@ import Addons from "./addons"
 import Intro from "./intro/intro";
 import Markdown from "./markdown";
 
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState({
@@ -16,6 +15,26 @@ function App() {
       subtitle: "A passionte frontend developer from India",
       titlepretext: "Hi 👋, I'm",
       title:'',
+      work:{
+        w1:"🔭 I’m currently working on",
+        w2:'',
+        w3:'',
+        w4:"👯 I’m looking to collaborate on",
+        w5:'',
+        w6:'',
+        w7:"📫 How to reach me",
+        w8:'',
+        w9:"👨‍💻 All of my projects are available at",
+        w10:'',
+        w11:"📝 I regularly write articles on",
+        w12:'',
+        w13:"📄 Know about myperiences",
+        w14:'',
+        w15:"⚡ Fun fact",
+        w16:'',
+
+      }
+      
     },
   });
   function show(event) {
@@ -38,10 +57,12 @@ function App() {
       <Intro intro={data.intro} introUpdate={updateData}/>
       <Skills />
       <Social />
-      <Addons />
-      
+      <Addons />      
       <button onClick={show}>Generate ReadMe</button>
-      <Markdown data={data} />
+
+      {/*temporarily put here to check the value */}
+      <Markdown data={data} /> 
+      
       <Footer />
     </div>
   );

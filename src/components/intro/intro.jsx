@@ -20,7 +20,7 @@ function Intro(props){
     <Subtitle  subtitle={props.intro.subtitle} handleUpdate={handleClick} />
 
     <h1>Work</h1>
-    <Work/>
+    <Work work={props.intro.work} handleUpdate={handleClick}/>
     
    </div> 
 )

@@ -22,14 +22,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Subtitle(props) {
-
-
   const classes = useStyles();
-  
- 
 
-  function handleChange(e) {    
-    props.handleUpdate(e.target.id , e.target.value);
+  function handleChange(e) {
+    props.handleUpdate(e.target.id, e.target.value);
   }
 
   return (
