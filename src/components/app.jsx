@@ -6,6 +6,7 @@ import Social from "./social/social";
 import Addons from "./addons"
 import Intro from "./intro/intro";
 import Markdown from "./markdown";
+
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -13,13 +14,13 @@ function App() {
   const [data, setData] = useState({
     intro: {
       subtitle: "A passionte frontend developer from India",
-      titlepretext: "Hi I am"
+      titlepretext: "Hi 👋, I'm",
     },
   });
   function show(event) {
     console.log(data)
-    const history = useHistory();
-    history.push('/componentURL');
+    // const history = useHistory();
+    // history.push('/componentURL');
    
   }
 
@@ -39,7 +40,7 @@ function App() {
       <Addons />
       
       <button onClick={show}>Generate ReadMe</button>
-      <Markdown data={data} >/</Markdown>
+      <Markdown data={data} />
       <Footer />
     </div>
   );

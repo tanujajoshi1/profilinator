@@ -7,13 +7,14 @@ import App from "./components/app";
 import { useHistory } from "react-router-dom";
 
 ReactDOM.render((
+    <App/>
 
-<Router history = {useHistory}>
-      <Route path = "/" component = {App}>
+// <Router history = {useHistory}>
+//       <Route path = "/" component = {App}>
          
-         <Route path = "markdown" component = {Markdown} />
-      </Route>
-   </Router>
+//          <Route path = "markdown" component = {Markdown} />
+//       </Route>
+//    </Router>
 
 
 ), document.getElementById("root"));

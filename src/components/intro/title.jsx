@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Title(title) {
+function Title(props) {
 
   function handleChange(e){
     console.log(e.target.id)
-    title.handleUpdate(e.target.id,e.target.value)
+    props.handleUpdate(e.target.id,e.target.value)
 
   }
 
