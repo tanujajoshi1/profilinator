@@ -7,9 +7,10 @@ import Addons from "./addons"
 import Intro from "./intro/intro";
 import Markdown from "./markdown";
 
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-function App() {
+function App(props) {
+  const history = useHistory();
   const [data, setData] = useState({
     intro: {
       subtitle: "A passionte frontend developer from India",
@@ -39,14 +40,20 @@ function App() {
   });
   function show(event) {
     console.log(data)
-    // const history = useHistory();
-    // history.push('/componentURL');
+    
+    // history.push('/componentURL');   
+
+      props.history.push({
+      pathname: '/markdown',
+      data
+    })
    
   }
 
   function updateData(section,key,value){
       console.log(section, key,value)
       let _data=data;
+
      _data[section][key]= value
       setData(_data)
   }
@@ -61,7 +68,7 @@ function App() {
       <button onClick={show}>Generate ReadMe</button>
 
       {/*temporarily put here to check the value */}
-      <Markdown data={data} /> 
+      {/* <Markdown data={data} />  */}
       
       <Footer />
     </div>

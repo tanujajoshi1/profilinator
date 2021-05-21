@@ -1,7 +1,7 @@
 import React from 'react'
 
 // title being converted to markdown
-const Title = props => {
+const TitleMD = props => {
   if (props.titlepretext && props.title) {
     return (
       <>
@@ -14,8 +14,7 @@ const Title = props => {
 }
 
 // subtitle being converted to markdown
-
-const Sub = props => {
+const SubtitleMD = props => {
     if (props.subtitle) {
       return (
         <>
@@ -28,14 +27,49 @@ const Sub = props => {
     return ""
   }
 
+  // subtitle being converted to markdown
+  // const WorkMD = props => {
+  //   if (props.prefix && props.project) {
+  //     if (props.link) {
+  //       return (
+  //         <>
+  //           {`- ${props.prefix} [${props.project}](${props.link})`}
+  //           <br />
+  //           <br />
+  //         </>
+  //       )
+  //     } else {
+  //       return (
+  //         <>
+  //           {`- ${props.prefix} **${props.project}**`}
+  //           <br />
+  //           <br />
+  //         </>
+  //       )
+  //     }
+  //   }
+  //   if (props.prefix && props.link) {
+  //     return (
+  //       <>
+  //         {`- ${props.prefix} [${props.link}](${props.link})`}
+  //         <br />
+  //         <br />
+  //       </>
+  //     )
+  //   }
+  //   return ""
+  // }
+
 
 // component Markdown to pass values to the above functions
 const Markdown = props => {
   console.log(props)
+  let data=props.location.data
     return (
         <div>    
-        <Sub subtitle={props.data.intro.subtitle} /> 
-        <Title titlepretext={props.data.intro.titlepretext} title={props.data.intro.title}/>
+        <SubtitleMD subtitle={data.intro.subtitle} /> 
+        <TitleMD titlepretext={data.intro.titlepretext} title={data.intro.title}/>
+        {/* <WorkMD/> */}
         </div>
     )
 }

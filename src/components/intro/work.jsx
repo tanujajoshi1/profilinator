@@ -21,8 +21,9 @@ const useStyles = makeStyles((theme) => ({
   }));
 function Work(props){
 
+    console.log(props.work)
     function handleChange(e){              
-        props.handleUpdate( e.target.id , e.target.value )
+        props.handleUpdate( 'intro.work' ,e.target.id , e.target.value )
 
     }
 
@@ -33,8 +34,8 @@ function Work(props){
              <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input id="w1" className={classes.paper} defaultValue={props.work.w1} inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
-                  </Grid>                 
+                    <Input id="w1" className={classes.paper} defaultValue={props.work.w1} inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                    </Grid>                 
                   <Grid item  xs={4}>                      
                   <Input id="w2" className={classes.paper} placeholder="Project Name" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>

@@ -6,9 +6,9 @@ import Work from './work';
 function Intro(props){
    
     
-   function handleClick(key,value) {
+   function handleClick(section,key,value) {
       console.log('Click happened', value);
-      props.introUpdate('intro',key,value)
+      props.introUpdate(section,key,value)
     }
 
    return(

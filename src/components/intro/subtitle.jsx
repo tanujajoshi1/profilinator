@@ -25,7 +25,7 @@ function Subtitle(props) {
   const classes = useStyles();
 
   function handleChange(e) {
-    props.handleUpdate(e.target.id, e.target.value);
+    props.handleUpdate('intro',e.target.id, e.target.value);
   }
 
   return (
