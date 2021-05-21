@@ -14,7 +14,7 @@ function Intro(props){
    return(
    <div className="intro">
     <h1>Title</h1>
-    <Title title={props.intro.title} handleUpdate= {handleClick}/>
+    <Title title={props.intro.title} titlepretext={props.intro.titlepretext} handleUpdate= {handleClick}/>
 
     <h1 >Subtitle</h1>
     <Subtitle  subtitle={props.intro.subtitle} handleUpdate={handleClick} />

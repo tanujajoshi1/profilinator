@@ -15,6 +15,7 @@ function App() {
     intro: {
       subtitle: "A passionte frontend developer from India",
       titlepretext: "Hi 👋, I'm",
+      title:'',
     },
   });
   function show(event) {

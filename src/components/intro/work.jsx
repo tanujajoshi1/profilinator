@@ -23,9 +23,8 @@ const useStyles = makeStyles((theme) => ({
 function Work(props){
 
     function handleChange(e){
-        // console.log(e.target.id)
-        console.log(e.target.value)
-        // props.handleUpdate(e.target.id,e.target.value)
+        console.log(e.target.id)        
+        // props.handleUpdate( e.target.id , e.target.value )
 
     }
 
@@ -36,13 +35,13 @@ function Work(props){
              <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input className={classes.paper} defaultValue="🔭 I’m currently working on" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w1" className={classes.paper} defaultValue="🔭 I’m currently working on" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>                 
                   <Grid item  xs={4}>                      
-                  <Input className={classes.paper} placeholder="Project Name" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w2" className={classes.paper} placeholder="Project Name" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
                   <Grid item  xs={4}>                      
-                  <Input className={classes.paper} placeholder="Project Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w3" className={classes.paper} placeholder="Project Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
               </Grid>  
               </div>
@@ -51,13 +50,13 @@ function Work(props){
               <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input className={classes.paper} defaultValue="👯 I’m looking to collaborate on" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w4" className={classes.paper} defaultValue="👯 I’m looking to collaborate on" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>                 
                   <Grid item  xs={4}>                      
-                  <Input className={classes.paper} placeholder="Project Name" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w5" className={classes.paper} placeholder="Project Name" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
                   <Grid item  xs={4}>                      
-                  <Input className={classes.paper} placeholder="Project Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w6" className={classes.paper} placeholder="Project Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
               </Grid>  
               </div>
@@ -66,24 +65,10 @@ function Work(props){
               <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input className={classes.paper}   defaultValue="🤝 I’m looking for help with" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
-                  </Grid>                 
-                  <Grid item  xs={4}>                      
-                  <Input  className={classes.paper} placeholder="Project Name" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
-                  </Grid>
-                  <Grid item  xs={4}>                      
-                  <Input className={classes.paper} placeholder="Project Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
-                  </Grid>
-              </Grid>  
-              </div>
-
-              <div className={classes.root}>
-              <Grid container spacing={3}>
-                  <Grid item  xs={4}>
-                  <Input className={classes.paper} defaultValue="📫 How to reach me" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w7" className={classes.paper} defaultValue="📫 How to reach me" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>                 
                   <Grid item  xs={8}>                      
-                  <Input className={classes.input} placeholder="example@gmail.com" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w8" className={classes.input} placeholder="example@gmail.com" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
               </Grid>  
               </div>
@@ -92,10 +77,10 @@ function Work(props){
               <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input className={classes.paper}  defaultValue="👨‍💻 All of my projects are available at" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w9" className={classes.paper}  defaultValue="👨‍💻 All of my projects are available at" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>                 
                   <Grid item  xs={8}>                      
-                  <Input className={classes.input} placeholder="Portfolio Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w10" className={classes.input} placeholder="Portfolio Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
               </Grid>  
               </div>
@@ -104,10 +89,10 @@ function Work(props){
               <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input className={classes.paper} defaultValue="📝 I regularly write articles on" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w11" className={classes.paper} defaultValue="📝 I regularly write articles on" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>                 
                   <Grid item  xs={8}>                      
-                  <Input className={classes.input} placeholder="Blog Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w12" className={classes.input} placeholder="Blog Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
               </Grid>  
               </div>
@@ -116,10 +101,10 @@ function Work(props){
               <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input className={classes.paper}  defaultValue="📄 Know about myperiences" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w13" className={classes.paper}  defaultValue="📄 Know about myperiences" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>                 
                   <Grid item  xs={8}>                      
-                  <Input className={classes.input} placeholder="Resume Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w14" className={classes.input} placeholder="Resume Link" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
               </Grid>  
               </div>
@@ -128,10 +113,10 @@ function Work(props){
               <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item  xs={4}>
-                  <Input className={classes.paper}  defaultValue="⚡ Fun fact" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w15" className={classes.paper}  defaultValue="⚡ Fun fact" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>                 
                   <Grid item  xs={8}>                      
-                  <Input className={classes.input} placeholder="I think I'm funny" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
+                  <Input id="w16" className={classes.input} placeholder="I think I'm funny" inputProps={{ 'aria-label': 'description' }} onChange={handleChange}/>
                   </Grid>
               </Grid>  
               </div>

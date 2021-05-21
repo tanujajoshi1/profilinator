@@ -21,16 +21,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Subtitle(subtitle) {
+function Subtitle(props) {
 
 
   const classes = useStyles();
   
-  const [data, setData] = useState("A passionte frontend developer from India");
+ 
 
-  function handleChange(e) {
-    setData(e.target.value);
-    subtitle.handleUpdate(e.target.id,e.target.value);
+  function handleChange(e) {    
+    props.handleUpdate(e.target.id , e.target.value);
   }
 
   return (
@@ -42,7 +41,7 @@ function Subtitle(subtitle) {
               <Input
                 id="subtitle"
                 className={classes.input}
-                defaultValue={data}
+                defaultValue={props.subtitle}
                 inputProps={{ "aria-label": "description" }}
                 onChange={handleChange}
               />

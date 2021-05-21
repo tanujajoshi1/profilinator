@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Title(props) {
-
+console.log(props)
   function handleChange(e){
     console.log(e.target.id)
     props.handleUpdate(e.target.id,e.target.value)
@@ -35,7 +35,7 @@ function Title(props) {
         <Grid container spacing={3}>
           <Grid item xs={3}>
             <Paper className={classes.paper}>
-              <Input id="titlepretext" defaultValue="Hi 👋, I'm" inputProps={{ "aria-label": "description" }}
+              <Input id="titlepretext" defaultValue={props.titlepretext} inputProps={{ "aria-label": "description" }}
               onChange={handleChange}
               />
             </Paper>
