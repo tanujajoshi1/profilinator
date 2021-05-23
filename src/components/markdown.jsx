@@ -156,7 +156,9 @@ function AIML(props) {
         <br/>
         {`## AI/ML`}
         <br/>
-        {am}
+        <div>
+            {am}
+        </div>
       </>
     );
     }
@@ -181,7 +183,9 @@ function Languages(props) {
       <>
         {`## Languages`}
         <br/>
-        {lang}
+        <div>
+            {lang}
+        </div>
       </>
     );
   }
@@ -207,7 +211,9 @@ function Frontend(props) {
         <br/>
         {`## Frontend`}
         <br/>
-        {front}
+        <div>
+            {front}
+        </div>
       </>
     );
   }
@@ -233,7 +239,9 @@ function Backend(props) {
         <br/>
         {`## Backend`}
         <br/>
-        {back}
+        <div>
+            {back}
+        </div>
       </>
     );
   }
@@ -259,7 +267,9 @@ function Mobile(props) {
         <br/>
         {`## Mobile`}
         <br/>
-        {mob}
+        <div>
+            {mob}
+        </div>
       </>
     );
   }
@@ -285,7 +295,9 @@ function Database(props) {
         <br/>
         {`## Database`}
         <br/>
-        {data}
+        <div>
+            {data}
+        </div>
       </>
     );
   }
@@ -311,7 +323,9 @@ function Datavisualization(props) {
         <br/>
         {`## Data Visualization`}
         <br/>
-        {datavis}
+        <div>
+            {datavis}
+        </div>
       </>
     );
   }
@@ -337,7 +351,9 @@ function Automation(props) {
         <br/>
         {`## Automation`}
         <br/>
-        {auto}
+        <div>
+            {auto}
+        </div>
       </>
     );
   }
@@ -363,7 +379,9 @@ function Other(props) {
         <br/>
         {`## Other`}
         <br/>
-        {oth}
+        <div>
+            {oth}
+        </div>
       </>
     );
   }
@@ -389,7 +407,9 @@ function Devops(props) {
         <br/>
         {`## Devops`}
         <br/>
-        {dev}
+        <div>
+            {dev}
+        </div>
       </>
     );
   }
@@ -415,7 +435,9 @@ function Baas(props) {
         <br/>
         {`## Baas`}
         <br/>
-        {bs}
+        <div>
+            {bs}
+        </div>
       </>
     );
   }
@@ -441,7 +463,9 @@ function Framework(props) {
         <br/>
         {`## Framework`}
         <br/>
-        {frame}
+        <div>
+            {frame}
+        </div>
       </>
     );
   }
@@ -467,7 +491,9 @@ function Game(props) {
         <br/>
         {`## Game Engine`}
         <br/>
-        {gm}
+        <div>
+            {gm}
+        </div>
       </>
     );
   }
@@ -493,7 +519,9 @@ function Testing(props) {
         <br/>
         {`## Testing`}
         <br/>
-        {test}
+        <div>
+            {test}
+        </div>
       </>
     );
   }
@@ -519,7 +547,9 @@ function Software(props) {
         <br/>
         {`## Software`}
         <br/>
-        {soft}
+        <div>
+            {soft}
+        </div>
       </>
     );
   }
