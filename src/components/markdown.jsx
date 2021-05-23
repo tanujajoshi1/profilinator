@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from "./header";
+import Footer from "./footer";
 
 let aiml = [];
 let languages = [];
@@ -15,6 +17,8 @@ let framework = [];
 let game = [];
 let testing = [];
 let software = [];
+
+var flag = 0;
 
 const AiMlList = props => {
     aiml = props.aimlList;
@@ -91,6 +95,7 @@ const SoftwareList = props => {
   return "";
 }
 
+// title being converted to markdown
 const TitleMD = props => {
   if (props.titlepretext && props.title) {
     return (
@@ -103,54 +108,63 @@ const TitleMD = props => {
   return ""
 }
 
+// subtitle being converted to markdown
 const SubtitleMD = props => {
-  if (props.subtitle) {
-    return (
-      <>
-        {`<h3 align="center">${props.subtitle}</h3>`}
-        <br />
-        <br />
-      </>
-    )
+    if (props.subtitle) {
+      return (
+        <>
+          {`<h3 align="center">${props.subtitle}</h3>`}
+          <br />
+          <br />
+        </>
+      )
+    }
+    return ""
   }
-  return ""
-}
 
-const WorkMD = props => {  
-  if (props.x && props.y) {
-    if (props.z) {
-      return (<> {`- ${props.x} [${props.y}](${props.z})`} <br /> <br />  </> )
-    }
-    else {
-      return (<> {`- ${props.x} **${props.y}**`} <br /> <br /> </> )
-    }
-  }
-  if (props.x && props.z) {
-    return (<> {`- ${props.x} [${props.z}](${props.z})`} <br /> <br /> </> )
-  }
-  return ""
-}
+let am = [];
 
 function AIML(props) {
     if(props.aiml.length > 0) {
-      return(
-        <>
-            {`<h1 align="center">${aiml}</h1>`}
-            <br />
-        </>
-      );
+    flag = 1;
+    var i;
+    for(i = 0; i < aiml.length; i++) {
+      var s = aiml[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      am.push(c);
+      am.push("     ")
+    }
+    return (
+      <>
+        <br/>
+        {`## AI/ML`}
+        <br/>
+        {am}
+      </>
+    );
     }
     else {
       return "";
     }
 }
 
+let lang = [];
+
 function Languages(props) {
   if(props.languages.length > 0) {
-    return(
+    flag = 1;
+    var i;
+    for(i = 0; i < languages.length; i++) {
+      var s = languages[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      lang.push(c);
+      lang.push("     ")
+    }
+    return (
       <>
-          {`<h1 align="center">${languages}</h1>`}
-          <br />
+        {`## Languages`}
+        <br/>
+        {lang}
       </>
     );
   }
@@ -158,13 +172,25 @@ function Languages(props) {
     return "";
   }
 }
+
+let front = [];
 
 function Frontend(props) {
   if(props.frontend.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < frontend.length; i++) {
+      var s = frontend[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      front.push(c);
+      front.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${frontend}</h1>`}
-          <br />
+        <br/>
+        {`## Frontend`}
+        <br/>
+        {front}
       </>
     );
   }
@@ -172,13 +198,25 @@ function Frontend(props) {
     return "";
   }
 }
+
+let back = [];
 
 function Backend(props) {
   if(props.backend.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < backend.length; i++) {
+      var s = backend[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      back.push(c);
+      back.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${backend}</h1>`}
-          <br />
+        <br/>
+        {`## Backend`}
+        <br/>
+        {back}
       </>
     );
   }
@@ -186,13 +224,25 @@ function Backend(props) {
     return "";
   }
 }
+
+let mob = [];
 
 function Mobile(props) {
   if(props.mobile.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < mobile.length; i++) {
+      var s = mobile[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      mob.push(c);
+      mob.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${mobile}</h1>`}
-          <br />
+        <br/>
+        {`## Mobile`}
+        <br/>
+        {mob}
       </>
     );
   }
@@ -200,13 +250,25 @@ function Mobile(props) {
     return "";
   }
 }
+
+let data = [];
 
 function Database(props) {
   if(props.database.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < database.length; i++) {
+      var s = database[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      data.push(c);
+      data.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${database}</h1>`}
-          <br />
+        <br/>
+        {`## Database`}
+        <br/>
+        {data}
       </>
     );
   }
@@ -214,13 +276,25 @@ function Database(props) {
     return "";
   }
 }
+
+let datavis = [];
 
 function Datavisualization(props) {
   if(props.datavisualization.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < datavisualization.length; i++) {
+      var s = datavisualization[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      datavis.push(c);
+      datavis.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${datavisualization}</h1>`}
-          <br />
+        <br/>
+        {`## Data Visualization`}
+        <br/>
+        {datavis}
       </>
     );
   }
@@ -228,13 +302,25 @@ function Datavisualization(props) {
     return "";
   }
 }
+
+let auto = [];
 
 function Automation(props) {
   if(props.automation.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < automation.length; i++) {
+      var s = automation[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      auto.push(c);
+      auto.push("     ");
+    }
     return(
       <>
-          {`<h1 align="center">${automation}</h1>`}
-          <br />
+        <br/>
+        {`## Automation`}
+        <br/>
+        {auto}
       </>
     );
   }
@@ -242,13 +328,25 @@ function Automation(props) {
     return "";
   }
 }
+
+let oth = [];
 
 function Other(props) {
   if(props.other.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < other.length; i++) {
+      var s = other[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      oth.push(c);
+      oth.push("     ");
+    }
     return(
       <>
-          {`<h1 align="center">${other}</h1>`}
-          <br />
+        <br/>
+        {`## Other`}
+        <br/>
+        {oth}
       </>
     );
   }
@@ -256,13 +354,25 @@ function Other(props) {
     return "";
   }
 }
+
+let dev = [];
 
 function Devops(props) {
   if(props.devops.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < devops.length; i++) {
+      var s = devops[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      dev.push(c);
+      dev.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${devops}</h1>`}
-          <br />
+        <br/>
+        {`## Devops`}
+        <br/>
+        {dev}
       </>
     );
   }
@@ -270,13 +380,25 @@ function Devops(props) {
     return "";
   }
 }
+
+let bs = [];
 
 function Baas(props) {
   if(props.baas.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < baas.length; i++) {
+      var s = baas[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      bs.push(c);
+      bs.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${baas}</h1>`}
-          <br />
+        <br/>
+        {`## Baas`}
+        <br/>
+        {bs}
       </>
     );
   }
@@ -284,13 +406,25 @@ function Baas(props) {
     return "";
   }
 }
+
+let frame = [];
 
 function Framework(props) {
   if(props.framework.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < framework.length; i++) {
+      var s = framework[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      frame.push(c);
+      frame.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${framework}</h1>`}
-          <br />
+        <br/>
+        {`## Framework`}
+        <br/>
+        {frame}
       </>
     );
   }
@@ -298,13 +432,25 @@ function Framework(props) {
     return "";
   }
 }
+
+let gm = [];
 
 function Game(props) {
   if(props.game.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < game.length; i++) {
+      var s = game[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      gm.push(c);
+      gm.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${game}</h1>`}
-          <br />
+        <br/>
+        {`## Game Engine`}
+        <br/>
+        {gm}
       </>
     );
   }
@@ -312,13 +458,25 @@ function Game(props) {
     return "";
   }
 }
+
+let test = [];
 
 function Testing(props) {
   if(props.testing.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < testing.length; i++) {
+      var s = testing[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      test.push(c);
+      test.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${testing}</h1>`}
-          <br />
+        <br/>
+        {`## Testing`}
+        <br/>
+        {test}
       </>
     );
   }
@@ -326,13 +484,25 @@ function Testing(props) {
     return "";
   }
 }
+
+let soft = [];
 
 function Software(props) {
   if(props.software.length > 0) {
+    flag = 1;
+    var i;
+    for(i = 0; i < software.length; i++) {
+      var s = software[i];
+      var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
+      soft.push(c);
+      soft.push("     ")
+    }
     return(
       <>
-          {`<h1 align="center">${software}</h1>`}
-          <br />
+        <br/>
+        {`## Software`}
+        <br/>
+        {soft}
       </>
     );
   }
@@ -340,33 +510,104 @@ function Software(props) {
     return "";
   }
 }
+
+// function Skill() {
+//   if(flag === 1) {
+//     return (
+//       <>
+//         {`<h1 align="center">My Skills</h1>`}
+//         <br/>
+//         <br/>
+//       </>
+//     );
+//   }
+//   else {
+//     return "";
+//   }
+// }
   
+
+  // subtitle being converted to markdown
+  // const WorkMD = props => {
+  //   if (props.prefix && props.project) {
+  //     if (props.link) {
+  //       return (
+  //         <>
+  //           {`- ${props.prefix} [${props.project}](${props.link})`}
+  //           <br />
+  //           <br />
+  //         </>
+  //       )
+  //     } else {
+  //       return (
+  //         <>
+  //           {`- ${props.prefix} **${props.project}**`}
+  //           <br />
+  //           <br />
+  //         </>
+  //       )
+  //     }
+  //   }
+  //   if (props.prefix && props.link) {
+  //     return (
+  //       <>
+  //         {`- ${props.prefix} [${props.link}](${props.link})`}
+  //         <br />
+  //         <br />
+  //       </>
+  //     )
+  //   }
+  //   return ""
+  // }
+
+
 // component Markdown to pass values to the above functions
 const Markdown = props => {
   console.log(props)
-  let data = props.location.data 
-
+  let data=props.location.data
     return (
-        <div>    
-        <SubtitleMD subtitle={data.intro.subtitle} /> 
-        <TitleMD titlepretext={data.intro.titlepretext} title={data.intro.title}/>
-        <WorkMD x={data.work.w1} y={data.work.w2} z={data.work.w3}/> <WorkMD x={data.work.w4} y={data.work.w5} z={data.work.w6}/>      
-        <WorkMD x={data.work.w7} y={data.work.w8}/> <WorkMD x={data.work.w9} y={data.work.w10}/> <WorkMD x={data.work.w11} y={data.work.w12}/> <WorkMD x={data.work.w13} y={data.work.w14}/>  <WorkMD x={data.work.w15} y={data.work.w16}/>    
-        <AIML aiml = {aiml} />
-        <Languages languages = {languages} />
-        <Frontend frontend = {frontend} />
-        <Backend backend = {backend} />
-        <Mobile mobile = {mobile} />
-        <Database database = {database} />
-        <Datavisualization datavisualization = {datavisualization} />
-        <Devops devops = {devops} />
-        <Baas baas = {baas} />
-        <Framework framework = {framework} />
-        <Game game = {game} />
-        <Testing testing = {testing} />
-        <Software software = {software} />
-        <Automation automation = {automation} />
-        <Other other = {other} />        
+        <div>
+        <Header />  
+        <div className = "markdownbutton">
+        <button className = "back">Back</button>
+        <button className = "copy">Copy</button>
+        <button className = "preview">Preview</button>
+        </div>
+        <div className = "markdown">
+          <>
+            {`<div align="center">
+              <img src="https://rishavanand.github.io/static/images/greetings.gif" align="center" style="width: 100%" />
+            </div>`}
+            <br/>
+            <br/>
+            <br/>
+          </>
+          {console.log(flag)}
+          <TitleMD titlepretext={data.intro.titlepretext} title={data.intro.title}/>
+          <SubtitleMD subtitle={data.intro.subtitle} /> 
+          <>
+            {`<h1 align="center">My Skills</h1>`}
+            <br/>
+            <br/>
+          </>
+          <Languages languages = {languages} />
+          <Frontend frontend = {frontend} />
+          <Backend backend = {backend} />
+          <Mobile mobile = {mobile} />
+          <AIML aiml = {aiml} />
+          <Database database = {database} />
+          <Datavisualization datavisualization = {datavisualization} />
+          <Devops devops = {devops} />
+          <Baas baas = {baas} />
+          <Framework framework = {framework} />
+          <Game game = {game} />
+          <Testing testing = {testing} />
+          <Software software = {software} />
+          <Automation automation = {automation} />
+          <Other other = {other} />
+        </div>  
+        <Footer />
+        {/* <WorkMD/> */}
         </div>
     )
 }
