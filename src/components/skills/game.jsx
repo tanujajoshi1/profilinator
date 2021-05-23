@@ -52,10 +52,10 @@ function GameEngine() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("unreal") : remove("unreal")}/><Item img = "https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg") : remove("https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg")}/><Item img = "https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("unity") : remove("unity")}/><Item img =  "https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg") : remove("https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
