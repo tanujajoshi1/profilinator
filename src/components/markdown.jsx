@@ -122,6 +122,23 @@ const SubtitleMD = props => {
     return ""
   }
 
+//work being converted to markdown
+const WorkMD = props => {  
+  if (props.x && props.y) {
+    if (props.z) {
+      return (<> {`- ${props.x} [${props.y}](${props.z})`} <br /> <br />  </>)
+    }
+    else {
+      return (<> {`- ${props.x} **${props.y}**`} <br /> <br /></>)
+    }
+  }
+  if (props.x && props.z) {
+    return (<> {`- ${props.x} [${props.z}](${props.z})`} <br /> <br /> </>)
+  }
+  return ""
+}
+
+
 let am = [];
 
 function AIML(props) {
@@ -527,40 +544,6 @@ function Software(props) {
 // }
   
 
-  // subtitle being converted to markdown
-  // const WorkMD = props => {
-  //   if (props.prefix && props.project) {
-  //     if (props.link) {
-  //       return (
-  //         <>
-  //           {`- ${props.prefix} [${props.project}](${props.link})`}
-  //           <br />
-  //           <br />
-  //         </>
-  //       )
-  //     } else {
-  //       return (
-  //         <>
-  //           {`- ${props.prefix} **${props.project}**`}
-  //           <br />
-  //           <br />
-  //         </>
-  //       )
-  //     }
-  //   }
-  //   if (props.prefix && props.link) {
-  //     return (
-  //       <>
-  //         {`- ${props.prefix} [${props.link}](${props.link})`}
-  //         <br />
-  //         <br />
-  //       </>
-  //     )
-  //   }
-  //   return ""
-  // }
-
-
 // component Markdown to pass values to the above functions
 const Markdown = props => {
   console.log(props)
@@ -585,6 +568,9 @@ const Markdown = props => {
           {console.log(flag)}
           <TitleMD titlepretext={data.intro.titlepretext} title={data.intro.title}/>
           <SubtitleMD subtitle={data.intro.subtitle} /> 
+          <WorkMD x={data.work.w1} y={data.work.w2} z={data.work.w3}/> <WorkMD x={data.work.w4} y={data.work.w5} z={data.work.w6}/>      
+          <WorkMD x={data.work.w7} y={data.work.w8}/> <WorkMD x={data.work.w9} y={data.work.w10}/> <WorkMD x={data.work.w11} y={data.work.w12}/> <WorkMD x={data.work.w13} y={data.work.w14}/>  <WorkMD x={data.work.w15} y={data.work.w16}/>    
+   
           <>
             {`<h1 align="center">My Skills</h1>`}
             <br/>
