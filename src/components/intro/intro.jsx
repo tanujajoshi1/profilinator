@@ -7,7 +7,7 @@ function Intro(props){
    
     
    function handleClick(section,key,value) {
-      console.log('Click happened', value);
+      
       props.introUpdate(section,key,value)
     }
 

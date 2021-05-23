@@ -91,7 +91,6 @@ const SoftwareList = props => {
   return "";
 }
 
-// title being converted to markdown
 const TitleMD = props => {
   if (props.titlepretext && props.title) {
     return (
@@ -104,7 +103,6 @@ const TitleMD = props => {
   return ""
 }
 
-// subtitle being converted to markdown
 const SubtitleMD = props => {
   if (props.subtitle) {
     return (
@@ -118,7 +116,6 @@ const SubtitleMD = props => {
   return ""
 }
 
-//work being converted to markdown
 const WorkMD = props => {  
   if (props.x && props.y) {
     if (props.z) {
