@@ -50,7 +50,7 @@ function Automation() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("zapier") : remove("zapier")}/><Item img = "https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg") : remove("https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg")}/><Item img = "https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
