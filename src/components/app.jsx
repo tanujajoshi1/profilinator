@@ -13,7 +13,7 @@ function App(props) {
   const history = useHistory();
   const [data, setData] = useState({
     intro: {
-      subtitle: "A passionte frontend developer from India",
+      subtitle: "A passionate frontend developer from India",
       titlepretext: "Hi 👋, I'm",
       title: '',
 

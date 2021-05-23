@@ -49,7 +49,7 @@ function Baas() {
 
     return (
         <div className = "skills-sub">
-            <p>Baas</p>
+            <p>BaaS</p>
 
             <div className={classes.root}>
                 <Grid container spacing={3}>
