@@ -11,6 +11,10 @@ let other = [];
 let automation = [];
 let devops = [];
 let baas = [];
+let framework = [];
+let game = [];
+let testing = [];
+let software = [];
 
 const AiMlList = props => {
     aiml = props.aimlList;
@@ -64,6 +68,26 @@ const DevopsList = props => {
 
 const BaasList = props => {
   baas = props.baasList;
+  return "";
+}
+
+const FrameworkList = props => {
+  framework = props.frameworkList;
+  return "";
+}
+
+const GameList = props => {
+  game = props.gameList;
+  return "";
+}
+
+const TestingList = props => {
+  testing = props.testingList;
+  return "";
+}
+
+const SoftwareList = props => {
+  software = props.softwareList;
   return "";
 }
 
@@ -247,6 +271,62 @@ function Baas(props) {
     return "";
   }
 }
+
+function Framework(props) {
+  if(props.framework.length > 0) {
+    return(
+      <>
+          {`<h1 align="center">${framework}</h1>`}
+          <br />
+      </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Game(props) {
+  if(props.game.length > 0) {
+    return(
+      <>
+          {`<h1 align="center">${game}</h1>`}
+          <br />
+      </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Testing(props) {
+  if(props.testing.length > 0) {
+    return(
+      <>
+          {`<h1 align="center">${testing}</h1>`}
+          <br />
+      </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Software(props) {
+  if(props.software.length > 0) {
+    return(
+      <>
+          {`<h1 align="center">${software}</h1>`}
+          <br />
+      </>
+    );
+  }
+  else {
+    return "";
+  }
+}
   
 
   // subtitle being converted to markdown
@@ -300,6 +380,10 @@ const Markdown = props => {
         <Datavisualization datavisualization = {datavisualization} />
         <Devops devops = {devops} />
         <Baas baas = {baas} />
+        <Framework framework = {framework} />
+        <Game game = {game} />
+        <Testing testing = {testing} />
+        <Software software = {software} />
         <Automation automation = {automation} />
         <Other other = {other} />
         {/* <WorkMD/> */}
@@ -309,5 +393,5 @@ const Markdown = props => {
 
 export default Markdown;
 
-export {AiMlList, LanguagesList, FrontendList, BackendList, MobileList, DatabaseList, DatavisualizationList, AutomationList, OtherList, DevopsList, BaasList};
+export {AiMlList, LanguagesList, FrontendList, BackendList, MobileList, DatabaseList, DatavisualizationList, AutomationList, OtherList, DevopsList, BaasList, FrameworkList, GameList, TestingList, SoftwareList};
 
