@@ -73,33 +73,16 @@ function Frontend() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("vuejs") : remove("vuejs")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("react") : remove("react")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" ) : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("angular") : remove("angular")}/><Item img =  "https://angular.io/assets/images/logos/angular/angular.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("https://angular.io/assets/images/logos/angular/angular.svg") : remove("https://angular.io/assets/images/logos/angular/angular.svg")}/><Item img =  "https://angular.io/assets/images/logos/angular/angular.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("svelte") : remove("svelte")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" /></Paper></label>
-                    </Grid>
-                </Grid>
-            </div>
-
-            <div className={classes.root}>
-                <Grid container spacing={3}>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked5} onChange={() => setChecked5(!checked5)} {...checked5 == true ? add("angularjs") : remove("angularjs")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked6} onChange={() => setChecked6(!checked6)} {...checked6 == true ? add("backbonejs") : remove("backbonejs")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/backbonejs/backbonejs-original-wordmark.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked7} onChange={() => setChecked7(!checked7)} {...checked7 == true ? add("bootstrap") : remove("bootstrap")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked8} onChange={() => setChecked8(!checked8)} {...checked8 == true ? add("vuetify") : remove("vuetify")}/><Item img =  "https://bestofjs.org/logos/vuetify.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg") : remove("https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
@@ -107,33 +90,16 @@ function Frontend() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked9} onChange={() => setChecked9(!checked9)} {...checked9 == true ? add("css3") : remove("css3")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked5} onChange={() => setChecked5(!checked5)} {...checked5 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked10} onChange={() => setChecked10(!checked10)} {...checked10 == true ? add("html5") : remove("html5")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked6} onChange={() => setChecked6(!checked6)} {...checked6 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/backbonejs/backbonejs-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/backbonejs/backbonejs-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/backbonejs/backbonejs-original-wordmark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked11} onChange={() => setChecked11(!checked11)} {...checked11 == true ? add("pug") : remove("pug")}/><Item img =  "https://cdn.worldvectorlogo.com/logos/pug.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked7} onChange={() => setChecked7(!checked7)} {...checked7 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked12} onChange={() => setChecked12(!checked12)} {...checked12 == true ? add("gulp") : remove("gulp")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg" /></Paper></label>
-                    </Grid>
-                </Grid>
-            </div>
-
-            <div className={classes.root}>
-                <Grid container spacing={3}>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked13} onChange={() => setChecked13(!checked13)} {...checked13 == true ? add("sass") : remove("sass")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked14} onChange={() => setChecked14(!checked14)} {...checked14 == true ? add("redux") : remove("redux")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked15} onChange={() => setChecked15(!checked15)} {...checked15 == true ? add("webpack") : remove("webpack")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked16} onChange={() => setChecked16(!checked16)} {...checked16 == true ? add("babel") : remove("babel")}/><Item img =  "https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked8} onChange={() => setChecked8(!checked8)} {...checked8 == true ? add("https://bestofjs.org/logos/vuetify.svg") : remove("https://bestofjs.org/logos/vuetify.svg")}/><Item img =  "https://bestofjs.org/logos/vuetify.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
@@ -141,16 +107,16 @@ function Frontend() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked17} onChange={() => setChecked17(!checked17)} {...checked17 == true ? add("tailwind") : remove("tailwind")}/><Item img = "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked9} onChange={() => setChecked9(!checked9)} {...checked9 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked18} onChange={() => setChecked18(!checked18)} {...checked18 == true ? add("materialize") : remove("materialize")}/><Item img =  "https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked10} onChange={() => setChecked10(!checked10)} {...checked10 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked19} onChange={() => setChecked19(!checked19)} {...checked19 == true ? add("bulma") : remove("bulma")}/><Item img =  "https://raw.githubusercontent.com/gilbarbara/logos/804dc257b59e144eaca5bc6ffd16949752c6f789/logos/bulma.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked11} onChange={() => setChecked11(!checked11)} {...checked11 == true ? add("https://cdn.worldvectorlogo.com/logos/pug.svg") : remove("https://cdn.worldvectorlogo.com/logos/pug.svg")}/><Item img =  "https://cdn.worldvectorlogo.com/logos/pug.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked20} onChange={() => setChecked20(!checked20)} {...checked20 == true ? add("gtk") : remove("gtk")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/7/71/GTK_logo.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked12} onChange={() => setChecked12(!checked12)} {...checked12 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
@@ -158,13 +124,47 @@ function Frontend() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked21} onChange={() => setChecked21(!checked21)} {...checked21 == true ? add("qt") : remove("qt")}/><Item img = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked13} onChange={() => setChecked13(!checked13)} {...checked13 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked22} onChange={() => setChecked22(!checked22)} {...checked22 == true ? add("wx_widgets") : remove("wx_widgets")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/b/bb/WxWidgets.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked14} onChange={() => setChecked14(!checked14)} {...checked14 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked23} onChange={() => setChecked23(!checked23)} {...checked23 == true ? add("ember") : remove("ember")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked15} onChange={() => setChecked15(!checked15)} {...checked15 == true ? add("https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg" /></Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked16} onChange={() => setChecked16(!checked16)} {...checked16 == true ? add("https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg") : remove("https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg" /></Paper></label>
+                    </Grid>
+                </Grid>
+            </div>
+
+            <div className={classes.root}>
+                <Grid container spacing={3}>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked17} onChange={() => setChecked17(!checked17)} {...checked17 == true ? add("https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg") : remove("https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg")}/><Item img = "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" /></Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked18} onChange={() => setChecked18(!checked18)} {...checked18 == true ? add("https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg") : remove("https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg")}/><Item img =  "https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg" /></Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked19} onChange={() => setChecked19(!checked19)} {...checked19 == true ? add("https://raw.githubusercontent.com/gilbarbara/logos/804dc257b59e144eaca5bc6ffd16949752c6f789/logos/bulma.svg") : remove("https://raw.githubusercontent.com/gilbarbara/logos/804dc257b59e144eaca5bc6ffd16949752c6f789/logos/bulma.svg")}/><Item img =  "https://raw.githubusercontent.com/gilbarbara/logos/804dc257b59e144eaca5bc6ffd16949752c6f789/logos/bulma.svg" /></Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked20} onChange={() => setChecked20(!checked20)} {...checked20 == true ? add("https://upload.wikimedia.org/wikipedia/commons/7/71/GTK_logo.svg") : remove("https://upload.wikimedia.org/wikipedia/commons/7/71/GTK_logo.svg")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/7/71/GTK_logo.svg" /></Paper></label>
+                    </Grid>
+                </Grid>
+            </div>
+
+            <div className={classes.root}>
+                <Grid container spacing={3}>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked21} onChange={() => setChecked21(!checked21)} {...checked21 == true ? add("https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg") : remove("https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg")}/><Item img = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" /></Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked22} onChange={() => setChecked22(!checked22)} {...checked22 == true ? add("https://upload.wikimedia.org/wikipedia/commons/b/bb/WxWidgets.svg") : remove("https://upload.wikimedia.org/wikipedia/commons/b/bb/WxWidgets.svg")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/b/bb/WxWidgets.svg" /></Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked23} onChange={() => setChecked23(!checked23)} {...checked23 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
