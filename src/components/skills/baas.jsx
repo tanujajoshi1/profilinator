@@ -54,16 +54,16 @@ function Baas() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("firebase") : remove("firebase")}/><Item img = "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg") : remove("https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg")}/><Item img = "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("appwrite") : remove("appwrite")}/><Item img =  "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg") : remove("https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("amplify") : remove("amplify")}/><Item img =  "https://docs.amplify.aws/assets/logo-dark.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("https://docs.amplify.aws/assets/logo-dark.svg") : remove("https://docs.amplify.aws/assets/logo-dark.svg")}/><Item img =  "https://docs.amplify.aws/assets/logo-dark.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("heroku") : remove("heroku")}/><Item img =  "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg") : remove("https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
