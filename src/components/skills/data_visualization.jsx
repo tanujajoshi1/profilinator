@@ -55,16 +55,16 @@ function DataVisualization() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("d3js") : remove("d3js")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("chartjs") : remove("chartjs")}/><Item img =  "https://www.chartjs.org/media/logo-title.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("https://www.chartjs.org/media/logo-title.svg") : remove("https://www.chartjs.org/media/logo-title.svg")}/><Item img =  "https://www.chartjs.org/media/logo-title.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("canvasjs") : remove("canvasjs")}/><Item img =  "https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg") : remove("https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg")}/><Item img =  "https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("kibana") : remove("kibana")}/><Item img =  "https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg") : remove("https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
@@ -72,7 +72,7 @@ function DataVisualization() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked5} onChange={() => setChecked5(!checked5)} {...checked5 == true ? add("grafana") : remove("grafana")}/><Item img = "https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked5} onChange={() => setChecked5(!checked5)} {...checked5 == true ? add("https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg") : remove("https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg")}/><Item img = "https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
