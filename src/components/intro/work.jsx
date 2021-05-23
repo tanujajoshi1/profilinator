@@ -23,7 +23,7 @@ function Work(props){
 
     console.log(props.work)
     function handleChange(e){              
-        props.handleUpdate( 'intro.work' ,e.target.id , e.target.value )
+        props.handleUpdate( 'work' ,e.target.id , e.target.value )
 
     }
 
