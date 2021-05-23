@@ -50,16 +50,16 @@ function AIML() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("tensorflow") : remove("tensorflow")}/><Item img = "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg") : remove("https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg")}/><Item img = "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("pytorch") : remove("pytorch")}/><Item img =  "https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg") : remove("https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("opencv") : remove("opencv")}/><Item img =  "https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg") : remove("https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" /></Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("scikitlearn") : remove("scikitlearn")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg") : remove("https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg")}/><Item img =  "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" /></Paper></label>
                     </Grid>
                 </Grid>
             </div>
