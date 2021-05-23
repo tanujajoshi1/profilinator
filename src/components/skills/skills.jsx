@@ -3,7 +3,13 @@ import Languages from "./languages";
 import Frontend from "./frontend";
 import Backend from "./backend";
 import Mobile from "./mobile";
-import AIML from "./ai_ml"
+import AIML from "./ai_ml";
+import Database from "./database";
+import DataVisualization from "./data_visualization";
+import Automation from "./automation";
+import Other from "./other";
+import Devops from "./devops";
+import Baas from "./baas";
 
 function Skills() {
     return (
@@ -14,6 +20,12 @@ function Skills() {
             <Backend />
             <Mobile / >
             <AIML />
+            <Database />
+            <DataVisualization />
+            <Devops />
+            <Baas />
+            <Automation />
+            <Other />
         </div>
     );
 }
