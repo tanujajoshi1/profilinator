@@ -10,6 +10,10 @@ import Automation from "./automation";
 import Other from "./other";
 import Devops from "./devops";
 import Baas from "./baas";
+import Framework from "./framework";
+import GameEngine from "./game";
+import Testing from "./testing";
+import Software from "./software";
 
 function Skills() {
     return (
@@ -24,6 +28,10 @@ function Skills() {
             <DataVisualization />
             <Devops />
             <Baas />
+            <Framework />
+            <GameEngine />
+            <Testing />
+            <Software />
             <Automation />
             <Other />
         </div>
