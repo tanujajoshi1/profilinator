@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "./header";
 import Footer from "./footer";
+import { useHistory } from "react-router-dom";
 
 let aiml = [];
 let languages = [];
@@ -558,6 +559,203 @@ function Software(props) {
   }
 }
 
+var myValue1 = ""; 
+
+const Githubuser = props => {
+  myValue1 = props.myValue1;
+  console.log(myValue1);
+  return "";
+}
+
+var myValue2 = ""; 
+
+const Linkedinuser = props => {
+  myValue2 = props.myValue2;
+  console.log(myValue2);
+  return "";
+}
+
+var myValue3 = ""; 
+
+const Codepenuser = props => {
+  myValue3 = props.myValue3;
+  console.log(myValue3);
+  return "";
+}
+
+var myValue4 = ""; 
+
+const Stackoverflowuser = props => {
+  myValue4 = props.myValue4;
+  console.log(myValue4);
+  return "";
+}
+
+var myValue5 = ""; 
+
+const Devuser = props => {
+  myValue5 = props.myValue5;
+  console.log(myValue5);
+  return "";
+}
+
+var myValue6 = ""; 
+
+const Mediumuser = props => {
+  myValue6 = props.myValue6;
+  console.log(myValue6);
+  return "";
+}
+
+var stats;
+
+const Githubstats = props => {
+  stats = props.stats;
+  console.log(stats);
+  return "";
+}
+
+function GithubStats() {
+  if(stats == true) {
+    return(
+      <>
+        <br/>
+        <div>
+        {`<div align="center">
+            <p>&nbsp;<img  src="https://github-readme-stats.vercel.app/api?username=${myValue1}&show_icons=true&locale=en" /></p>
+        </div>`}
+        </div>
+        
+      </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+var visitors;
+
+const Githubvisitors = props => {
+  visitors = props.visitors;
+  console.log(visitors);
+  return "";
+}
+
+function GithubVisitors() {
+  if(visitors == true) {
+    return(
+      <>
+        <br/> 
+        <div>
+        {`<div align="center">
+          <p> <img src="https://komarev.com/ghpvc/?username=${myValue1}&label=Profile%20views&color=0e75b6&style=flat" /> </p>
+        </div>`}
+        </div> 
+      </>
+    )
+  }
+  else {
+    return "";
+  }
+}
+
+function Github() {
+  if(myValue1.length > 0) {
+    return (
+      <>
+        <br/>
+        {`<a href="https://github.com/${myValue1}" target="_blank">`}<br/>
+        {`<img src=https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white style="margin-bottom: 15px;" />`}<br/>
+        {`</a>`}<br/>
+        </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Linkedin() {
+  if(myValue2.length > 0) {
+    return (
+      <>
+        <br/>
+        {`<a href="https://linkedin.com/in/${myValue2}" target="_blank">`}<br/>
+        {`<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white style="margin-bottom: 15px;" />`}<br/>
+        {`</a>`}<br/>
+        </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Codepen() {
+  if(myValue3.length > 0) {
+    return (
+      <>
+        <br/>
+        {`<a href="https://codepen.io/${myValue3}" target="_blank">`}<br/>
+        {`<img src=https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white style="margin-bottom: 15px;" />`}<br/>
+        {`</a>`}<br/>
+        </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Stackoverflow() {
+  if(myValue2.length > 0) {
+    return (
+      <>
+        <br/>
+        {`<a href="https://stackoverflow.com/users/${myValue4}" target="_blank">`} <br/>
+        {`<img src=https://img.shields.io/badge/stackoverflow-%23F28032.svg?&style=for-the-badge&logo=stackoverflow&logoColor=white style="margin-bottom: 15px;" />`}<br/>
+        {`</a>`}<br/>
+        </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Dev() {
+  if(myValue5.length > 0) {
+    return (
+      <>
+        <br/>
+        {`<a href="https://dev.to/${myValue5}" target="_blank">`}<br/>
+        {`<img src=https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev-dot-to&logoColor=white style="margin-bottom: 15px;" />`}<br/>
+        {`</a>`}<br/>
+        </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
+function Medium() {
+  if(myValue6.length > 0) {
+    return (
+      <>
+        <br/>
+        {`<a href="https://medium.com/@${myValue6}" target="_blank">`} <br/>
+        {`<img src=https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white style="margin-bottom: 15px;" />`}<br/>
+        {`</a>`}<br/>
+      </>
+    );
+  }
+  else {
+    return "";
+  }
+}
+
 // function Skill() {
 //   if(flag === 1) {
 //     return (
@@ -576,13 +774,14 @@ function Software(props) {
 
 // component Markdown to pass values to the above functions
 const Markdown = props => {
+  const history = useHistory();
   console.log(props)
   let data=props.location.data
     return (
         <div>
         <Header />  
         <div className = "markdownbutton">
-        <button className = "back">Back</button>
+        <button className = "back" onClick={() => history.push('/')}>Back</button>
         <button className = "copy">Copy</button>
         <button className = "preview">Preview</button>
         </div>
@@ -599,8 +798,7 @@ const Markdown = props => {
           <TitleMD titlepretext={data.intro.titlepretext} title={data.intro.title}/>
           <SubtitleMD subtitle={data.intro.subtitle} /> 
           <WorkMD x={data.work.w1} y={data.work.w2} z={data.work.w3}/> <WorkMD x={data.work.w4} y={data.work.w5} z={data.work.w6}/>      
-          <WorkMD x={data.work.w7} y={data.work.w8}/> <WorkMD x={data.work.w9} y={data.work.w10}/> <WorkMD x={data.work.w11} y={data.work.w12}/> <WorkMD x={data.work.w13} y={data.work.w14}/>  <WorkMD x={data.work.w15} y={data.work.w16}/>    
-   
+          <WorkMD x={data.work.w7} y={data.work.w8}/> <WorkMD x={data.work.w9} y={data.work.w10}/> <WorkMD x={data.work.w11} y={data.work.w12}/> <WorkMD x={data.work.w13} y={data.work.w14}/>  <WorkMD x={data.work.w15} y={data.work.w16}/>   
           <>
             {`<h1 align="center">My Skills</h1>`}
             <br/>
@@ -621,6 +819,14 @@ const Markdown = props => {
           <Software software = {software} />
           <Automation automation = {automation} />
           <Other other = {other} />
+          <Github myValue1 = {myValue1} />
+          <Linkedin myValue2 = {myValue2} />
+          <Codepen myValue3 = {myValue3} />
+          <Stackoverflow myValue4 = {myValue4} />
+          <Dev myValue5 = {myValue5} />
+          <Medium myValue6 = {myValue6} />
+          <GithubStats myValue1 = {myValue1} />
+          <GithubVisitors myValue1 = {myValue1 } />
         </div>  
         <Footer />
         {/* <WorkMD/> */}
@@ -630,5 +836,4 @@ const Markdown = props => {
 
 export default Markdown;
 
-export {AiMlList, LanguagesList, FrontendList, BackendList, MobileList, DatabaseList, DatavisualizationList, AutomationList, OtherList, DevopsList, BaasList, FrameworkList, GameList, TestingList, SoftwareList};
-
+export {AiMlList, LanguagesList, FrontendList, BackendList, MobileList, DatabaseList, DatavisualizationList, AutomationList, OtherList, DevopsList, BaasList, FrameworkList, GameList, TestingList, SoftwareList, Githubuser, Githubstats, Githubvisitors, Linkedinuser, Codepenuser, Stackoverflowuser, Mediumuser, Devuser};
