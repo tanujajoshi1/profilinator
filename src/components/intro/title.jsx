@@ -20,10 +20,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Title(props) {
-  console.log(props);
   function handleChange(e) {
-    console.log(e.target.id);
-    props.handleUpdate('intro',e.target.id, e.target.value);
+    props.handleUpdate("intro", e.target.id, e.target.value);
   }
 
   const classes = useStyles();
