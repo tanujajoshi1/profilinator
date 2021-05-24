@@ -770,7 +770,8 @@ const Markdown = (props) => {
   let data = props.location.data;
   return (
     <div>
-      <Header />
+
+      <Header />      
       <div className="markdownbutton">
 
         <button className="back" onClick={() => history.push("/")}>Back</button>
