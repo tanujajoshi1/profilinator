@@ -3,7 +3,6 @@ import Header from "./header";
 import Footer from "./footer";
 import Skills from "./skills/skills";
 import Social from "./social/social";
-import Addons from "./addons"
 import Intro from "./intro/intro";
 
 
@@ -62,7 +61,6 @@ function App(props) {
       <Intro intro={data.intro} work={data.work} introUpdate={updateData} />
       <Skills />
       <Social />
-      <Addons />
       <button onClick={show}>Generate ReadMe</button>
       <Footer />
     </div>
