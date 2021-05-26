@@ -51,6 +51,10 @@ img {
 label:hover {
     cursor: pointer;
 }
+label{
+    font-size: 15px;
+    
+}
 
 .skills, .intro  {
     width: 90%;
@@ -101,3 +105,17 @@ button:hover{
     font-size: 20px;
     margin-bottom: 13px;
 }
+
+input[type="checkbox"]{
+    cursor: pointer;
+    display: grid;
+    margin-left: 20%; 
+   
+}
+
+img{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+

@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     boxShadow: 'none', 
-    width: '100%'
+    width: '100%',
+    display:'flex',
   },
 }));
 
@@ -59,33 +60,16 @@ function Framework() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 === true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg" /> Django</Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 === true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" /> .NET</Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 === true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg" /> Electron</Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 == true ? add("https://symfony.com/logos/symfony_black_03.svg") : remove("https://symfony.com/logos/symfony_black_03.svg")}/><Item img =  "https://symfony.com/logos/symfony_black_03.svg" /></Paper></label>
-                    </Grid>
-                </Grid>
-            </div>
-
-            <div className={classes.root}>
-                <Grid container spacing={3}>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked5} onChange={() => setChecked5(!checked5)} {...checked5 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked6} onChange={() => setChecked6(!checked6)} {...checked6 == true ? add("https://cdn.worldvectorlogo.com/logos/codeigniter.svg") : remove("https://cdn.worldvectorlogo.com/logos/codeigniter.svg")}/><Item img =  "https://cdn.worldvectorlogo.com/logos/codeigniter.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked7} onChange={() => setChecked7(!checked7)} {...checked7 == true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" /></Paper></label>
-                    </Grid>
-                    <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked8} onChange={() => setChecked8(!checked8)} {...checked8 == true ? add("https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg") : remove("https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 === true ? add("https://symfony.com/logos/symfony_black_03.svg") : remove("https://symfony.com/logos/symfony_black_03.svg")}/><Item img =  "https://symfony.com/logos/symfony_black_03.svg" /> Symfony</Paper></label>
                     </Grid>
                 </Grid>
             </div>
@@ -93,7 +77,24 @@ function Framework() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked9} onChange={() => setChecked9(!checked9)} {...checked9 == true ? add("https://cdn.quasar.dev/logo/svg/quasar-logo.svg") : remove("https://cdn.quasar.dev/logo/svg/quasar-logo.svg")}/><Item img = "https://cdn.quasar.dev/logo/svg/quasar-logo.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked5} onChange={() => setChecked5(!checked5)} {...checked5 === true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg")}/><Item img = "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" /> Laravel</Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked6} onChange={() => setChecked6(!checked6)} {...checked6 === true ? add("https://cdn.worldvectorlogo.com/logos/codeigniter.svg") : remove("https://cdn.worldvectorlogo.com/logos/codeigniter.svg")}/><Item img =  "https://cdn.worldvectorlogo.com/logos/codeigniter.svg" /> Codeigniter</Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked7} onChange={() => setChecked7(!checked7)} {...checked7 === true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" /> Rails</Paper></label>
+                    </Grid>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked8} onChange={() => setChecked8(!checked8)} {...checked8 === true ? add("https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg") : remove("https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" /> Flask</Paper></label>
+                    </Grid>
+                </Grid>
+            </div>
+
+            <div className={classes.root}>
+                <Grid container spacing={3}>
+                    <Grid item xs={3}>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked9} onChange={() => setChecked9(!checked9)} {...checked9 === true ? add("https://cdn.quasar.dev/logo/svg/quasar-logo.svg") : remove("https://cdn.quasar.dev/logo/svg/quasar-logo.svg")}/><Item img = "https://cdn.quasar.dev/logo/svg/quasar-logo.svg" /> Quasar</Paper></label>
                     </Grid>
                 </Grid>
             </div>

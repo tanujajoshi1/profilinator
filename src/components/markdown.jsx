@@ -585,7 +585,7 @@ const Githubstats = (props) => {
 };
 
 function GithubStats() {
-  if (stats == true) {
+  if (stats === true) {
     return (
       <>
         <br />
@@ -610,7 +610,7 @@ const Githubvisitors = (props) => {
 };
 
 function GithubVisitors() {
-  if (visitors == true) {
+  if (visitors === true) {
     return (
       <>
         <br />

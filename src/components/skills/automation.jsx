@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     boxShadow: 'none', 
-    width: '100%'
+    width: '100%',
+    display:'flex',
   },
 }));
 
@@ -54,7 +55,7 @@ function Automation() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 == true ? add("https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg") : remove("https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg")}/><Item img = "https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked1} onChange={() => setChecked1(!checked1)} {...checked1 === true ? add("https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg") : remove("https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg")}/><Item img = "https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" /> Zapier</Paper></label>
                     </Grid>
                     {/* <Grid item xs={3}>
                     <label><Paper className={classes.paper}><input type="checkbox" value={checked2} onChange={() => setChecked2(!checked2)} {...checked2 == true ? add("https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg") : remove("https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" /></Paper></label>

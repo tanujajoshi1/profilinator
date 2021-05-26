@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     boxShadow: 'none', 
     width: '100%',
+    display:'flex',
   },
 }));
 
@@ -77,10 +78,10 @@ function SocialItem() {
             <div className={classes.root}>
               <Grid container spacing={3}>
                   <Grid item xs={6}>
-                  <label><Paper className={classes.paper}><input type="checkbox" defaultChecked={checked1} onChange={() => setChecked1(!checked1)} disabled={myValue1.length<1}/>{'  '}Add github stats card</Paper></label>
+                  <label><Paper className={classes.paper}><input type="checkbox" defaultChecked={checked1} onChange={() => setChecked1(!checked1)} disabled={myValue1.length<1}/>{'  '} Add github stats card</Paper></label>
                   </Grid>
                   <Grid item xs={6}>
-                  <label><Paper className={classes.paper}><input type="checkbox" defaultChecked={checked2} onChange={() => setChecked2(!checked2)} disabled={myValue1.length<1}/>{'  '}Add github visitors counter</Paper></label>
+                  <label><Paper className={classes.paper}><input type="checkbox" defaultChecked={checked2} onChange={() => setChecked2(!checked2)} disabled={myValue1.length<1}/>{'  '} Add github visitors counter</Paper></label>
                   </Grid>
               </Grid>  
             </div>
