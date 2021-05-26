@@ -132,7 +132,7 @@ function Languages() {
                     <label><Paper className={classes.paper}><input type="checkbox" value={checked15} onChange={() => setChecked15(!checked15)} {...checked15 === true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" /> Swift</Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked16} onChange={() => setChecked16(!checked16)} {...checked16 === true ? add("https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg") : remove("https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg" /> O=bjectivec</Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked16} onChange={() => setChecked16(!checked16)} {...checked16 === true ? add("https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg") : remove("https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg" /> Objectivec</Paper></label>
                     </Grid>
                 </Grid>
             </div>

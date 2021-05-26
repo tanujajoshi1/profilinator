@@ -100,7 +100,7 @@ function Frontend() {
                     <label><Paper className={classes.paper}><input type="checkbox" value={checked7} onChange={() => setChecked7(!checked7)} {...checked7 === true ? add("https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg") : remove("https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg")}/><Item img =  "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" /> Bootstrap</Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked8} onChange={() => setChecked8(!checked8)} {...checked8 === true ? add("https://bestofjs.org/logos/vuetify.svg") : remove("https://bestofjs.org/logos/vuetify.svg")}/><Item img =  "https://bestofjs.org/logos/vuetify.svg" /></Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked8} onChange={() => setChecked8(!checked8)} {...checked8 === true ? add("https://bestofjs.org/logos/vuetify.svg") : remove("https://bestofjs.org/logos/vuetify.svg")}/><Item img =  "https://bestofjs.org/logos/vuetify.svg" /> Vuetify</Paper></label>
                     </Grid>
                 </Grid>
             </div>

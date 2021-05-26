@@ -81,7 +81,7 @@ function Testing() {
                     <label><Paper className={classes.paper}><input type="checkbox" value={checked6} onChange={() => setChecked6(!checked6)} {...checked6 === true ? add("https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/karma.svg") : remove("https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/karma.svg")}/><Item img =  "https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/karma.svg" /> Karma</Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked7} onChange={() => setChecked7(!checked7)} {...checked7 === true ? add("https://www.vectorlogo.zone/logos/jasmine/jasmine-icon.svg") : remove("https://www.vectorlogo.zone/logos/jasmine/jasmine-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/jasmine/jasmine-icon.svg" /> J=asmine</Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked7} onChange={() => setChecked7(!checked7)} {...checked7 === true ? add("https://www.vectorlogo.zone/logos/jasmine/jasmine-icon.svg") : remove("https://www.vectorlogo.zone/logos/jasmine/jasmine-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/jasmine/jasmine-icon.svg" /> Jasmine</Paper></label>
                     </Grid>
                 </Grid>
             </div>

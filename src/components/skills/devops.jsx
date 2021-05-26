@@ -70,7 +70,7 @@ function Devops() {
                     <label><Paper className={classes.paper}><input type="checkbox" value={checked3} onChange={() => setChecked3(!checked3)} {...checked3 === true ? add("https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg") : remove("https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" /> Jenkins</Paper></label>
                     </Grid>
                     <Grid item xs={3}>
-                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 === true ? add("https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg") : remove("https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" /> Google Cloud Platform</Paper></label>
+                    <label><Paper className={classes.paper}><input type="checkbox" value={checked4} onChange={() => setChecked4(!checked4)} {...checked4 === true ? add("https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg") : remove("https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg")}/><Item img =  "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" /> Google Cloud</Paper></label>
                     </Grid>
                 </Grid>
             </div>
