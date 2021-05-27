@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import ReactModal from 'react-modal';
 import marked from "marked";
 
-
 let aiml = [];
 let languages = [];
 let frontend = [];
@@ -281,7 +280,7 @@ function Mobile(props) {
   }
 }
 
-let data = [];
+let datab = [];
 
 function Database(props) {
   if (props.database.length > 0) {
@@ -290,15 +289,15 @@ function Database(props) {
     for (i = 0; i < database.length; i++) {
       var s = database[i];
       var c = "<img src = " + '"' + s + '"' + " width = '40' height = '40'/>";
-      data.push(c);
-      data.push("     ");
+      datab.push(c);
+      datab.push("     ");
     }
     return (
       <>
         <br />
         {`## Database`}
         <br />
-        <div>{data}</div>
+        <div>{datab}</div>
       </>
     );
   } else {
@@ -618,7 +617,7 @@ function GithubVisitors() {
       <>
         <br />
         <div>
-          {`<div align="center"}>
+          {`<div align="center">
           <p> <img src="https://komarev.com/ghpvc/?username=${myValue1}&label=Profile%20views&color=0e75b6&style=flat" style="height: auto; width: auto;"/> </p>
         </div>`}
         </div>
@@ -757,12 +756,12 @@ marked.setOptions({
 
 const renderer = new marked.Renderer();
 
-var myValue;
+var myValuePreview;
 
 function Preview() {
   return (
     <div dangerouslySetInnerHTML = {{
-      __html: marked(myValue, { renderer: renderer}),
+      __html: marked(myValuePreview, { renderer: renderer}),
     }}id = "preview">
     </div>
     // console.log(myValue)
@@ -777,9 +776,25 @@ const Markdown = (props) => {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  bs = [];
+  dev = [];
+  oth = [];
+  auto = [];
+  am = [];
+  lang = [];
+  front = [];
+  back = [];
+  mob = [];
+  datab = [];
+  datavis = [];
+  frame = [];
+  gm = [];
+  test = [];
+  soft = [];
+
   function handleClick() {
     
-    myValue = document.getElementById("md").innerText;
+    const myValue = document.getElementById("md").innerText;
     navigator.clipboard.writeText(myValue).then(()=>{
         console.log("Copied to clipboard");
         setIsCopied(true);
@@ -788,6 +803,26 @@ const Markdown = (props) => {
         alert("Could not copy text");
       }
     );
+  }
+
+  function fun() {
+    myValuePreview = document.getElementById("md").innerText;
+  }
+
+  const customStyles = {
+    content : {
+      position: 'fixed',
+      width: '80%',
+      height: '90%',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundcolor: 'black',
+    }
+  };
+
+  function closeModal(){
+    setModalIsOpen(false);
   }
 
   let data = props.location.data;
@@ -799,10 +834,10 @@ const Markdown = (props) => {
 
         <button className="back" onClick={() => history.push("/")}>Back</button>
         <button onClick={handleClick} className="copy">{isCopied ? "✅ Copied" : "Copy"}</button>
-        <button className="preview" onClick={() => { setModalIsOpen(true); handleClick();}}>Preview</button>
+        <button className="preview" onClick={() => { setModalIsOpen(true); fun();}}>Preview</button>
 
-        <ReactModal isOpen = {modalIsOpen} shouldCloseOnEsc = {true}>
-          <Preview markdown = {myValue} />
+        <ReactModal isOpen = {modalIsOpen} onRequestClose = {closeModal} style = {customStyles}>
+          <Preview markdown = {myValuePreview} />
         </ReactModal>
 
       </div>
