@@ -3,6 +3,9 @@ import Header from "./header";
 import Footer from "./footer";
 import { useHistory } from "react-router-dom";
 
+import ReactModal from 'react-modal';
+import marked from "marked";
+
 
 let aiml = [];
 let languages = [];
@@ -591,7 +594,7 @@ function GithubStats() {
         <br />
         <div>
           {`<div align="center">
-            <p>&nbsp;<img  src="https://github-readme-stats.vercel.app/api?username=${myValue1}&show_icons=true&locale=en" /></p>
+            <p>&nbsp;<img  src="https://github-readme-stats.vercel.app/api?username=${myValue1}&show_icons=true&locale=en" style="height: auto; width: auto;"/></p>
         </div>`}
         </div>
       </>
@@ -615,8 +618,8 @@ function GithubVisitors() {
       <>
         <br />
         <div>
-          {`<div align="center">
-          <p> <img src="https://komarev.com/ghpvc/?username=${myValue1}&label=Profile%20views&color=0e75b6&style=flat" /> </p>
+          {`<div align="center"}>
+          <p> <img src="https://komarev.com/ghpvc/?username=${myValue1}&label=Profile%20views&color=0e75b6&style=flat" style="height: auto; width: auto;"/> </p>
         </div>`}
         </div>
       </>
@@ -633,7 +636,7 @@ function Github() {
         <br />
         {`<a href="https://github.com/${myValue1}" target="_blank">`}
         <br />
-        {`<img src=https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white style="margin-bottom: 15px;" />`}
+        {`<img src=https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white style="margin-bottom: 15px; height: auto; width: auto;" />`}
         <br />
         {`</a>`}
         <br />
@@ -651,7 +654,7 @@ function Linkedin() {
         <br />
         {`<a href="https://linkedin.com/in/${myValue2}" target="_blank">`}
         <br />
-        {`<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white style="margin-bottom: 15px;" />`}
+        {`<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white style="margin-bottom: 15px; height: auto; width: auto;" />`}
         <br />
         {`</a>`}
         <br />
@@ -669,7 +672,7 @@ function Codepen() {
         <br />
         {`<a href="https://codepen.io/${myValue3}" target="_blank">`}
         <br />
-        {`<img src=https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white style="margin-bottom: 15px;" />`}
+        {`<img src=https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white style="margin-bottom: 15px; height: auto; width: auto;" />`}
         <br />
         {`</a>`}
         <br />
@@ -687,7 +690,7 @@ function Stackoverflow() {
         <br />
         {`<a href="https://stackoverflow.com/users/${myValue4}" target="_blank">`}{" "}
         <br />
-        {`<img src=https://img.shields.io/badge/stackoverflow-%23F28032.svg?&style=for-the-badge&logo=stackoverflow&logoColor=white style="margin-bottom: 15px;" />`}
+        {`<img src=https://img.shields.io/badge/stackoverflow-%23F28032.svg?&style=for-the-badge&logo=stackoverflow&logoColor=white style="margin-bottom: 15px; height: auto; width: auto;" />`}
         <br />
         {`</a>`}
         <br />
@@ -705,7 +708,7 @@ function Dev() {
         <br />
         {`<a href="https://dev.to/${myValue5}" target="_blank">`}
         <br />
-        {`<img src=https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev-dot-to&logoColor=white style="margin-bottom: 15px;" />`}
+        {`<img src=https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev-dot-to&logoColor=white style="margin-bottom: 15px; height: auto; width: auto;" />`}
         <br />
         {`</a>`}
         <br />
@@ -722,7 +725,7 @@ function Medium() {
       <>
         <br />
         {`<a href="https://medium.com/@${myValue6}" target="_blank">`} <br />
-        {`<img src=https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white style="margin-bottom: 15px;" />`}
+        {`<img src=https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white style="margin-bottom: 15px; height: auto; width: auto;" />`}
         <br />
         {`</a>`}
         <br />
@@ -748,15 +751,35 @@ function Medium() {
 //   }
 // }
 
+marked.setOptions({
+  breaks: true,
+});
+
+const renderer = new marked.Renderer();
+
+var myValue;
+
+function Preview() {
+  return (
+    <div dangerouslySetInnerHTML = {{
+      __html: marked(myValue, { renderer: renderer}),
+    }}id = "preview">
+    </div>
+    // console.log(myValue)
+  );
+}
+
+
 // component Markdown to pass values to the above functions
 const Markdown = (props) => {
   const history = useHistory();
   const [isCopied, setIsCopied] = useState(false);
- 
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function handleClick() {
     
-    const myValue = document.getElementById("md").innerText;
+    myValue = document.getElementById("md").innerText;
     navigator.clipboard.writeText(myValue).then(()=>{
         console.log("Copied to clipboard");
         setIsCopied(true);
@@ -776,20 +799,24 @@ const Markdown = (props) => {
 
         <button className="back" onClick={() => history.push("/")}>Back</button>
         <button onClick={handleClick} className="copy">{isCopied ? "✅ Copied" : "Copy"}</button>
-        <button className="preview">Preview</button>
+        <button className="preview" onClick={() => { setModalIsOpen(true); handleClick();}}>Preview</button>
+
+        <ReactModal isOpen = {modalIsOpen} shouldCloseOnEsc = {true}>
+          <Preview markdown = {myValue} />
+        </ReactModal>
 
       </div>
 
       <div className="markdown" id="md">
         <>
           {`<div align="center">
-              <img src="https://rishavanand.github.io/static/images/greetings.gif" align="center" style="width: 100%" />
+              <img src="https://rishavanand.github.io/static/images/greetings.gif" align="center" style="width: 100%; margin-left: 0px;margin-right: 0px;" />
             </div>`}
           <br />
           <br />
           <br />
         </>
-        {console.log(flag)}
+        {/* {console.log(flag)} */}
         <TitleMD
           titlepretext={data.intro.titlepretext}
           title={data.intro.title}
