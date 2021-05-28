@@ -6,6 +6,8 @@ import { useHistory } from "react-router-dom";
 import ReactModal from 'react-modal';
 import marked from "marked";
 
+import Error from "./404";
+
 let aiml = [];
 let languages = [];
 let frontend = [];
@@ -900,7 +902,7 @@ const Markdown = (props) => {
   }
   else{
     return(
-      <h2>404 Page Not Found</h2>
+      <Error />
     )
   }
 };
