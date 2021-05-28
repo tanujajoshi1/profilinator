@@ -6,10 +6,10 @@ function Footer() {
         <footer>
             <h2>Made with ❤️ in India</h2>
             <div className = "more">
-                <a href="#">Github</a>
-                <a href="#">Fork</a>
-                <a href="#">Issues</a>
-                <a href="#">Pull Requests</a>
+                <a href="https://github.com/tanujajoshi1/profilinator">Github</a>
+                <a href="https://github.com/tanujajoshi1/profilinator/fork">Fork</a>
+                <a href="https://github.com/tanujajoshi1/profilinator/issues">Issues</a>
+                <a href="https://github.com/tanujajoshi1/profilinator/pulls">Pull Requests</a>
             </div>
             <p>Created in {year}</p>
         </footer>

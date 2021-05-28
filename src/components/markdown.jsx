@@ -826,6 +826,7 @@ const Markdown = (props) => {
   }
 
   let data = props.location.data;
+  if(data){
   return (
     <div>
 
@@ -896,6 +897,12 @@ const Markdown = (props) => {
       <Footer />
     </div>
   );
+  }
+  else{
+    return(
+      <h2>404 Page Not Found</h2>
+    )
+  }
 };
 
 export default Markdown;
