@@ -118,4 +118,22 @@ img{
     margin-right: 2%;
 }
 
+.error {
+    text-align: center;
+}
 
+.logo {
+    height: 80vh;
+    width: auto;
+}
+
+h4 {
+    color: #263253;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: #7690CF;
+    font-size: 1.5rem;
+}
