@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  Try the tool: [Profilinator](https://github-profilinator.netlify.app/)
+  Try the tool: https://github-profilinator.netlify.app/
 </p>
 
 ###   Want to create an eye-catchy GitHub profile ReadMe ?
